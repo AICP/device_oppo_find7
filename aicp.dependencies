@@ -25,12 +25,12 @@
     "branch":      "cm-11.0"
   },
   {
-   "repository":  "AOKP/device_oppo_msm8974-common",
+   "repository":  "CyanogenMod/device_oppo_msm8974-common",
    "target_path": "device/oppo/msm8974-common",
    "branch":      "kitkat"
   },
   {
-   "repository":  "AOKP/device_oppo_apq8064-common",
+   "repository":  "CyanogenMod/device_oppo_apq8064-common",
    "target_path": "device/oppo/apq8064-common",
    "branch":      "kitkat"
   },
