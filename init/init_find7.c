@@ -51,7 +51,7 @@ static void import_kernel_nv(char *name, int for_emulator)
             property_set("ro.sf.lcd_density", "640");
             property_set("ro.oppo.device", "find7s");
         } else {
-            property_set("ro.sf.lcd_density", "480");
+            property_set("ro.sf.lcd_density", "380");
             property_set("ro.oppo.device", "find7a");
         }
     }
