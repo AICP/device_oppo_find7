@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba3e81b7_10462424",
+        "filename": "system.prop",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2014-07-26T13:24:21Z",
+      "side": 1,
+      "message": "this line is commented out.. you get that?",
+      "revId": "645fad4ea36280ae2217c6962c93ac67a959ec47",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": false
+    }
+  ]
+}
