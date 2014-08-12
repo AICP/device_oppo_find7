@@ -43,7 +43,8 @@ TARGET_INIT_VENDOR_LIB := libinit_find7
 # Recovery
 TARGET_RECOVERY_FSTAB := device/oppo/find7/rootdir/etc/fstab.qcom
 
-TARGET_OTA_ASSERT_DEVICE := find7,find7a,X9006,X9007,x9076
+# Assert
+TARGET_OTA_ASSERT_DEVICE := find7,find7a,X9007,X9006,FIND7
 
 # inherit from the proprietary version
 -include vendor/oppo/find7/BoardConfigVendor.mk
