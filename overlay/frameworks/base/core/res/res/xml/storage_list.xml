@@ -21,20 +21,21 @@
 
 <StorageList xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- internal SD card -->
+    <!-- external SD card mounted on sdcard0 - see fstab.qcom -->
     <storage android:mountPoint="/storage/sdcard0"
              android:storageDescription="@string/storage_internal"
              android:primary="true"
              android:emulated="false"
              android:mtpReserve="100" />
 
-    <!-- external SD card -->
+    <!-- *real* external SD card is disabled
     <storage android:mountPoint="/storage/sdcard1"
              android:storageDescription="@string/storage_sd_card"
              android:primary="false"
              android:emulated="false"
              android:removable="true"
              android:allowMassStorage="true" />
+   -->
 
     <!-- external usb storage -->
     <storage android:mountPoint="/storage/usbdisk"
@@ -44,3 +45,4 @@
              android:removable="true" />
 
 </StorageList>
+
