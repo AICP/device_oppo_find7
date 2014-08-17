@@ -1,7 +1,7 @@
 [
   {
-    "repository": "AICP/device_oppo_find7",
-    "target_path": "device/oppo/find7",
+    "repository": "alienmind/device_oppo_find7ext",
+    "target_path": "device/oppo/find7ext",
     "branch":      "kitkat"
   },
   {
