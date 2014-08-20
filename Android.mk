@@ -14,9 +14,9 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/oppo/find7u
+LOCAL_PATH := device/oppo/find7
 
-ifeq ($(TARGET_DEVICE),find7u)
+ifeq ($(TARGET_DEVICE),find7)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 

@@ -1,10 +1,11 @@
+#
 # Copyright (C) 2014 The Gummy ROM Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-#      http://www.apache.org/licenses/LICENSE-2.0
+# http://www.apache.org/licenses/LICENSE-2.0
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
@@ -12,15 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-
-# Inherit from find7 device
-$(call inherit-product, device/oppo/find7u/device_find7u.mk)
-
-# Discard inherited values and use our own instead.
-PRODUCT_NAME := full_find7u
-PRODUCT_DEVICE := find7u
-PRODUCT_BRAND := OPPO
-PRODUCT_MANUFACTURER := OPPO
-PRODUCT_MODEL := Find7
+PRODUCT_MAKEFILES := \
+	$(LOCAL_DIR)/full_find7.mk \
+        $(LOCAL_DIR)/nameless_find7.mk
