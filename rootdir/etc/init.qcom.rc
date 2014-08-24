@@ -78,14 +78,15 @@ on boot
     chown bluetooth bluetooth /sys/devices/platform/msm_serial_hs.0/clock
     chmod 0660 /sys/devices/platform/msm_serial_hs.0/clock
 #Add begin for flash led test by liujinshui
-    chown system system /sys/devices/qcom,camera-led-flash.1/test
-    chown system system /sys/class/leds/led:flash_0/flash_blink
-    chown system system /sys/class/leds/led:flash_1/flash_blink
-    chown system system /sys/class/leds/led:flash_torch/flash_blink
+    chown system camera /sys/devices/qcom,camera-led-flash.1/test
+    chown system camera /sys/class/leds/led:flash_0/flash_blink
+    chown system camera /sys/class/leds/led:flash_1/flash_blink
+    chown system camera /sys/class/leds/led:flash_torch/flash_blink
 #Add end
 #Add begin for flash led test by lingjianing
-    chown system system /sys/class/leds/led:flash_torch/brightness
+    chown system camera /sys/class/leds/led:flash_torch/brightness
 #Add end
+    chmod 0660 /sys/devices/qcom,camera-led-flash.1/test 
 #oppo yuyi 2014-03-10 add begin for PMIC RGB_led
 #ifdef VENDOR_EDIT
 	chown root system sys/class/leds/rgb_red/brightness
