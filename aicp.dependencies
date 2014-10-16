@@ -20,9 +20,9 @@
    "branch":      "cm-11.0"
   },
   {
-   "repository":  "NamelessRom/android_kernel_oneplus_msm8974",
+   "repository":  "CyanogenMod/android_kernel_oneplus_msm8974",
    "target_path": "kernel/oneplus/msm8974",
-   "branch":      "android-4.4"
+   "branch":      "cm-11.0"
   },
   {
     "repository": "CyanogenMod/android_hardware_qcom_display-caf-new",
