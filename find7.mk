@@ -23,10 +23,24 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    fstab.qcom \
     init.qcom.rc \
     init.qcom.usb.rc \
     libinit_find7
+
+# Ramdisk - LVM+std variants
+PRODUCT_PACKAGES += \
+    init.fs.rc.std \
+    init.fs.rc.lvm \
+    fstab.find7.qcom.std \
+    fstab.find7.qcom.lvm
+
+# LVM
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/lvm/lvm_init.sh:root/lvm_init.sh \
+    $(LOCAL_PATH)/lvm/lvm_symlinks.sh:root/lvm_symlinks.sh \
+    $(LOCAL_PATH)/lvm/lvm_setprop.sh:root/lvm_setprop.sh \
+    $(LOCAL_PATH)/lvm/lvm:root/sbin/lvm \
+    $(LOCAL_PATH)/lvm/lvm.conf:root/lvm/etc/lvm.conf
 
 # Audio
 PRODUCT_COPY_FILES += \
