@@ -16,6 +16,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),find7)
+ifeq ($(PRODUCT_NAME),aicp_find7)
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
 endif
