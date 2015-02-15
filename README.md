@@ -1,3 +1,6 @@
+Device tree for OPPO Find7 universal (Find7a, Find7s, Stock layout, Unified layout, LVM)
+
 Copyright 2014 - The CyanogenMod Project
 
-Device configuration for Oppo Find7.
+Copyright 2014 - The Nameless Project
+
