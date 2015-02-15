@@ -1,6 +1,5 @@
 #
-# Copyright (C) 2014 The CyanogenMod Project
-# Copyright (C) 2014 The NamelessRom Project
+# Copyright 2012 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,8 +14,8 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := $(call my-dir)
-
-ifeq ($(TARGET_DEVICE),find7)
-include $(call all-subdir-makefiles,$(LOCAL_PATH))
-endif
+# See Google's documentation on storage configurations
+export EXTERNAL_STORAGE /storage/emulated/legacy
+export SECONDARY_STORAGE /storage/sdcard1:/storage/usbdisk
+export EMULATED_STORAGE_SOURCE /mnt/shell/emulated
+export EMULATED_STORAGE_TARGET /storage/emulated
