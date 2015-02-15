@@ -1,5 +1,4 @@
 # Copyright (C) 2014 The CyanogenMod Project
-# Copyright (C) 2014 The NamelessRom Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,15 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+LOCAL_PATH := $(call my-dir)
 
-# Inherit from find7 device
-$(call inherit-product, device/oppo/find7/find7.mk)
+include $(CLEAR_VARS)
 
-# Discard inherited values and use our own instead.
-PRODUCT_NAME := full_find7
-PRODUCT_DEVICE := find7
-PRODUCT_BRAND := OPPO
-PRODUCT_MANUFACTURER := OPPO
-PRODUCT_MODEL := Oppo Find 7
+LOCAL_MODULE := nfc.msm8974
+LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
+LOCAL_SRC_FILES := nfc_hw.c
+LOCAL_SHARED_LIBRARIES := liblog libcutils
+LOCAL_MODULE_TAGS := optional
+LOCAL_CFLAGS += -D$(TARGET_DEVICE)
+
+include $(BUILD_SHARED_LIBRARY)
