@@ -2,4 +2,6 @@
 
 set -e
 
-./../../oppo/find7-common/setup-makefiles.sh
+export DEVICE=find7
+export VENDOR=oppo
+./../../oppo/msm8974-common/setup-makefiles.sh $@

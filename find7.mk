@@ -17,14 +17,19 @@
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-# Boot animation
-TARGET_SCREEN_HEIGHT := 1920
-TARGET_SCREEN_WIDTH := 1080
-
-# Ramdisk - fstab/init.qcom.rc is different for each variant
+# Ramdisk
 PRODUCT_PACKAGES += \
-    fstab.qcom \
-    init.qcom.rc
+    fstab.qcom.std \
+    fstab.qcom.ufd \
+    fstab.qcom.lvm \
+    lvm \
+    lvm.conf \
+    init.fs.rc.std \
+    init.fs.rc.emu \
+    init.qcom.rc \
+    init.qcom.usb.rc \
+    storage_earlyinit.sh \
+    storage_init.sh
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi xxhdpi
@@ -36,5 +41,35 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-dalv
 # call hwui memory config
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
 
-# Inherit from find7-common
-$(call inherit-product, device/oppo/find7-common/find7.mk)
+# System properties
+-include $(LOCAL_PATH)/system_prop.mk
+
+# Audio
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml \
+    $(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf \
+    $(LOCAL_PATH)/audio/mixer_paths.xml:system/etc/mixer_paths.xml
+
+# Camera
+PRODUCT_PACKAGES += \
+    camera.msm8974
+
+# NFC packages
+PRODUCT_PACKAGES += \
+    nfc.msm8974 \
+    libnfc \
+    libnfc_jni \
+    Nfc \
+    Tag \
+    com.android.nfc_extras
+
+# Permissions
+PRODUCT_COPY_FILES += \
+    frameworks/base/nfc-extras/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
+    frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml
+
+# Call the proprietary setup
+$(call inherit-product-if-exists, vendor/oppo/find7/find7-vendor.mk)
+
+# Inherit from msm8974-common
+$(call inherit-product, device/oppo/msm8974-common/msm8974.mk)
