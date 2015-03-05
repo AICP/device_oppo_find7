@@ -1,6 +1,6 @@
 [
   {
-    "repository": "CyanogenMod/device_oppo_find7-common",
+    "repository": "CyanogenMod/android_device_oppo_find7-common",
     "target_path": "device/oppo/find7-common",
     "branch" : "cm-12.0"
   },
