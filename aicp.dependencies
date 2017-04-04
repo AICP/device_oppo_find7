@@ -1,0 +1,37 @@
+[
+  {
+    "repository":  "AICP/device_oppo_common",
+    "target_path": "device/oppo/common",
+    "branch":      "n7.1"
+  },
+  {
+    "repository": "LineageOS/android_device_qcom_common",
+    "target_path": "device/qcom/common",
+    "branch":      "cm-14.1"
+  },
+  {
+    "repository": "LineageOS/android_packages_resources_devicesettings",
+    "target_path": "packages/resources/devicesettings",
+    "branch":      "cm-14.1"
+  },
+  {
+    "repository":  "AICP/device_oppo_find7-common",
+    "target_path": "device/oppo/find7-common",
+    "branch":      "n7.1"
+  },
+  {
+    "repository":  "AICP/device_oppo_msm8974-common",
+    "target_path": "device/oppo/msm8974-common",
+    "branch":      "n7.1"
+  },
+  {
+    "repository":  "surajdazz/android_kernel_oppo_msm8974",
+    "target_path": "kernel/oppo/msm8974",
+    "branch":      "n7.1"
+  },
+  {
+    "repository":  "TheMuppets/proprietary_vendor_oppo",
+    "target_path": "vendor/oppo",
+    "branch":      "cm-14.1"
+  }
+]
