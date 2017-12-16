@@ -25,9 +25,9 @@
     "branch":      "n7.1"
   },
   {
-    "repository":  "surajdazz/android_kernel_oppo_msm8974",
+    "repository":  "LineageOS/android_kernel_oppo_msm8974",
     "target_path": "kernel/oppo/msm8974",
-    "branch":      "n7.1"
+    "branch":      "cm-14.1"
   },
   {
     "repository":  "TheMuppets/proprietary_vendor_oppo",
